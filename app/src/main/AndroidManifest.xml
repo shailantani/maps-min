@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
 
     <application
-        android:name="com.sameersw.mapsmin.MinMapsApp"
+        android:name="com.sameerasw.minmaps.MinMapsApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,17 +16,16 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.sameersw.mapsmin.com.sameerasw.minmaps.MainActivity"
+            android:name="com.sameerasw.minmaps.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <service
-            android:name="com.sameersw.mapsmin.NotificationListener"
+            android:name="com.sameerasw.minmaps.NotificationListener"
             android:exported="true"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
@@ -32,7 +33,7 @@
             </intent-filter>
         </service>
 
-        <receiver android:name="com.sameersw.mapsmin.ScreenOffReceiver"
+        <receiver android:name="com.sameerasw.minmaps.ScreenOffReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SCREEN_OFF" />

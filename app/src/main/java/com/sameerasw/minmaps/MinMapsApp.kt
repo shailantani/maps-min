@@ -1,4 +1,4 @@
-package com.sameersandakelum.mapsmin
+package com.sameerasw.minmaps
 
 import android.app.Application
 
